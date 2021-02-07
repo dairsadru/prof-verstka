@@ -1,0 +1,221 @@
+.nav-block
+    min-height: 148px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background: #F8F3F4
+
+.nav__menu
+    list-style-type: none
+    display: flex
+    font-weight: 300
+    font-size: 14px
+    line-height: 17px
+    color: #636363
+
+.name-page
+    font-size: 24px
+    line-height: 29px
+    color: $colorSelect
+
+.new-arrivals
+    color: $colorSelect
+
+.nav__link
+    margin-left: 3px
+
+.sort
+    padding-top: 51px
+    padding-bottom: 55px
+    display: flex
+    position: relative
+
+.filter
+    padding-top: 13px
+    display: flex
+    align-items: baseline
+    position: absolute
+    z-index: 2
+    &-param__name
+        font-size: 14px
+        line-height: 17px
+        color: $colorText
+
+    &-param__name:after
+        font-family: Font Awesome\ 5 Free
+        font-weight: 900
+        content: '\f107'
+        margin-left: 10px
+
+    &-param
+        display: flex
+        position: relative
+        margin-left: calc(33.3333% + 15px)
+        padding-top: 13px
+
+    &-param__list
+        z-index: 3
+        margin-right: 28px
+
+    &_active
+        position: absolute
+
+    &__name
+        margin-left: 16px
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        color: #000000
+        margin-right: 11px
+
+    &__img
+        margin-left: 11px
+        fill: black
+
+    &:hover .filter__name
+        color: $colorSelect
+
+    &:hover .filter__img
+        fill: $colorSelect
+
+    &__name:hover
+        color: $colorSelect
+
+    &__name:hover .filter__img
+        fill: $colorSelect
+
+    &__item
+        padding: 40px 16px 16px 16px
+        width: 360px
+        position: absolute
+        top: 0
+        left: 0
+        background: #FFFFFF
+        z-index: -1
+        opacity: 0
+        visibility: hidden
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+        transition: all .3s ease 0s
+
+    &_active:hover .filter__item
+        opacity: 1
+        visibility: visible
+
+    &__category
+        font-size: 14px
+        line-height: 17px
+        color: $colorSelect
+        border-left: 5px solid $colorSelect
+        border-bottom: 1px solid #EBEBEB
+        padding: 11px
+        margin-bottom: 11px
+        cursor: pointer
+
+    &-ul
+        padding: 18px
+        list-style-type: none
+
+    &-ul__link
+        font-size: 14px
+        line-height: 25px
+        color: $colorText
+
+summary:focus
+    outline: none
+
+summary::-webkit-details-marker
+    display: none
+
+.trend
+    position: absolute
+    padding: 11px
+    width: 73px
+    display: flex
+    flex-direction: column
+    background: #FFFFFF
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+
+.custom-checkbox
+    font-size: 14px
+    line-height: 19px
+    color: $colorText
+
+    &>input
+        position: absolute
+        z-index: -1
+        opacity: 0
+
+    &>span
+        display: inline-flex
+        align-items: center
+        user-select: none
+
+    &>span::before
+        content: ''
+        width: 12px
+        height: 12px
+        border: 1px solid #adb5bd
+        margin-right: 8px
+
+    &>input+span:hover::before
+        border-color: #ee546954
+
+    &>input:not(:disabled):active+span::before
+        background-color: #ee546954
+        border-color: #ee546954
+
+    &>input:focus+span::before
+        box-shadow: 0 0 0 2px #ee546954
+
+    &>input:focus:not(:checked)+span::before
+        border-color: $colorSelect
+
+    &>input:checked+span::after
+        content: ''
+        width: 10px
+        height: 10px
+        left: 13px
+        border-radius: 2px
+        border-color: $colorSelect
+        background-color: $colorSelect
+        position: absolute
+
+    &>input:disabled+span::before
+        background-color: #ee546954
+
+.pagination
+    width: 282px
+    display: flex
+    align-items: center
+    margin: 0 auto
+    border: 1px solid #EBEBEB
+    padding: 15px 16px
+    border-radius: 3px
+    margin-bottom: 100px
+
+    &__list
+        display: flex
+        list-style-type: none
+
+    &__page:not(:last-child)
+        margin-right: 20px
+
+    &__arrow_left
+        margin-right: 19px
+
+    &__page
+        font-weight: 300
+        font-size: 16px
+        line-height: 19px
+        color: #EBEBEB
+
+    &__page_active
+        color: $colorSelect
+
+    &__page:hover
+        color: $colorText
+
+    &__arrow_right:hover path,
+
+    &__arrow_left:hover path
+        fill: $colorSelect

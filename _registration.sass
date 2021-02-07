@@ -1,0 +1,120 @@
+.registration-block
+    padding-top: 64px
+    padding-bottom: 96px
+    display: flex
+
+.registration
+    width: 360px
+    display: flex
+    flex-direction: column
+
+    &__name,
+
+    &__login
+        display: flex
+        flex-direction: column
+
+    &__gender
+        margin-bottom: 35px
+
+    &__radio
+        font-weight: 300
+        font-size: 11px
+        line-height: 13px
+        color: #000000
+
+    &__radio:last-of-type
+        margin-left: 20px
+
+    &__radio~label
+        margin-left: 10px
+
+    &__text
+        font-weight: 300
+        font-size: 13px
+        line-height: 16px
+        color: #B1B1B1
+        margin-bottom: 39px
+
+    &__btn
+        padding: 16px 29px
+        font-size: 14px
+        line-height: 17px
+        color: #FFFFFF
+        background: $colorSelect
+        width: 167px
+
+    &__btn_svg
+        margin-left: 10px
+
+    &__radio
+        position: absolute
+        z-index: -1
+        opacity: 0
+
+    &__radio+label
+        display: inline-flex
+        align-items: center
+        user-select: none
+
+    &__radio+label::before
+        content: ''
+        display: inline-block
+        width: 1em
+        height: 1em
+        flex-shrink: 0
+        flex-grow: 0
+        border: 1px solid #adb5bd
+        border-radius: 50%
+        margin-right: 0.5em
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: 50% 50%
+
+    &__radio:not(:disabled):not(:checked)+label:hover::before
+        border-color: black
+
+    &__radio:not(:disabled):active+label::before
+        background-color: $colorSelect
+        border-color: $colorSelect
+
+    &__radio:checked+label::before
+        border-color: $colorSelect
+        background-color: $colorSelect
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+
+.loyalty
+    margin-left: 128px
+    max-width: 650px
+    flex-grow: 1
+    flex-basis: 360px
+
+    &__heading
+        font-weight: 300
+        font-size: 24px
+        line-height: 29px
+        color: #000000
+        margin-bottom: 22px
+
+    &__text
+        font-weight: 300
+        font-size: 24px
+        line-height: 29px
+        color: #000000
+        margin-bottom: 21px
+
+    &__list
+        list-style-type: none
+        background: url(images/loyaltySvg.svg) no-repeat 0 0px
+        padding-left: 24px
+        font-weight: 300
+        font-size: 24px
+        line-height: 29px
+        color: #000000
+        margin-bottom: 16px
+
+.registration__heading
+    @extend .shipping-adress__heading
+
+.registration__input
+    @extend .shipping-adress__input
